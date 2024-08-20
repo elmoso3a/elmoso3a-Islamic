@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elmoso3a</title>
+    <meta name="description" content="موقع ديني يحتوي على مقالات، تلاوات، وأدوات دينية مثل مواعيد الصلاة والتقويم الهجري والميلادي.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d00;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #003300;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav ul li a:hover {
+            background-color: #002200;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #eaeaea;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        .content {
+            flex: 3;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            background-color: #004d00;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .card, .article, .audio-section, .prayer {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to elmoso3a</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">المقالات</a></li>
+            <li><a href="#">تلاوات وأدعية</a></li>
+            <li><a href="#">مواعيد الصلاة</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>الشريط الجانبي</h2>
+            <div class="card">
+                <h3>مقال مميز</h3>
+                <p>اقرأ أحدث مقال عن التعاليم والممارسات الإسلامية.</p>
+            </div>
+            <div class="card">
+                <h3>مواعيد الصلاة</h3>
+                <p>اكتشف مواعيد الصلاة لمدينتك:</p>
+                <p>الفجر: <span id="fajr">جارٍ التحميل...</span></p>
+                <p>الظهر: <span id="dhuhr">جارٍ التحميل...</span></p>
+                <p>العصر: <span id="asr">جارٍ التحميل...</span></p>
+                <p>المغرب: <span id="maghrib">جارٍ التحميل...</span></p>
+                <p>العشاء: <span id="isha">جارٍ التحميل...</span></p>
+            </div>
+            <div class="card">
+                <h3>التقويم</h3>
+                <p>التاريخ الهجري: <span id="hijri-date">جارٍ التحميل...</span></p>
+                <p>التاريخ الميلادي: <span id="gregorian-date">جارٍ التحميل...</span></p>
+            </div>
+        </aside>
+
+        <div class="content">
+            <section class="articles">
+                <h2>المقالات</h2>
+                <div class="article">
+                    <h3>تفسير سورة الفاتحة</h3>
+                    <p>سورة الفاتحة هي السورة الأولى في القرآن الكريم وتعد من أعظم السور... [نص تفصيلي عن تفسير السورة]</p>
+                </div>
+                <div class="article">
+                    <h3>حياة النبي محمد ﷺ</h3>
+                    <p>ولد النبي محمد ﷺ في مكة المكرمة في عام الفيل... [نص تفصيلي عن السيرة النبوية]</p>
+                </div>
+                <div class="article">
+                    <h3>فتوى حول الصوم في رمضان</h3>
+                    <p>الصوم في رمضان فرض على كل مسلم بالغ... [نص تفصيلي حول الفتاوى الشرعية]</p>
+                </div>
+            </section>
+
+            <section class="audio">
+                <h2>تلاوات وأدعية</h2>
+                <div class="audio-section">
+                    <h3>تلاوة سورة البقرة</h3>
+                    <audio controls>
+                        <source src="url-to-surah-al-baqarah.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>تلاوة للقارئ الشيخ... [اسم القارئ وتفاصيل أخرى]</p>
+                </div>
+                <div class="prayer">
+                    <h3>دعاء يوم الجمعة</h3>
+                    <audio controls>
+                        <source src="url-to-friday-prayer.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>نص الدعاء: اللهم صل وسلم على نبينا محمد... [نص الدعاء]</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 elmoso3a. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // تحديث مواعيد الصلاة بناءً على موقعك الجغرافي
+        async function fetchPrayerTimes() {
+            try {
+                const response = await fetch('https://api.aladhan.com/v1/timingsByCity?city=Doha&country=Qatar&method=2');
+                const data = await response.json();
+                const timings = data.data.timings;
+                document.getElementById('fajr').textContent = timings.Fajr;
+                document.getElementById('dhuhr').textContent = timings.Dhuhr;
+                document.getElementById('asr').textContent = timings.Asr;
+                document.getElementById('maghrib').textContent = timings.Maghrib;
+                document.getElementById('isha').textContent = timings.Isha;
+            } catch (error) {
+                console.error('خطأ في تحميل مواعيد الصلاة:', error);
+            }
+        }
+        fetchPrayerTimes();
+
+        // تحديث التاريخ الهجري والميلادي
+        async function fetchDate() {
+            try {
+                const response = await fetch('https://api.aladhan.com/v1/gregorian');
+                const data = await response.json();
+                const hijriDate = data.data.hijri.date;
+                const gregorianDate = data.data.gregorian.date;
+                document.getElementById('hijri-date').textContent = hijriDate;
+                document.getElementById('gregorian-date').textContent = gregorianDate;
+            } catch (error) {
+                console.error('خطأ في تحميل التاريخ:', error);
+            }
+        }
+        fetchDate();
+    </script>
+</body>
+</html>
